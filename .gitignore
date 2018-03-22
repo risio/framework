@@ -1,0 +1,20 @@
+# Builds
+packages/risio-*/dist
+
+# Dependencies
+node_modules
+npm-debug.log
+
+# Lerna
+lerna-debug.log
+
+# Documentation
+_book
+
+# IDE's
+.vscode
+.idea
+
+# Code coverage
+.nyc_output
+coverage

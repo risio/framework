@@ -1,0 +1,20 @@
+{
+  "name": "risio-framework",
+  "license": "MIT",
+  "scripts": {
+    "clean": "lerna run --parallel clean",
+    "test": "npm run clean && lerna run --parallel test",
+    "build": "lerna run --parallel build",
+    "watch": "lerna run --parallel watch",
+    "watch-test": "lerna run --parallel watch-test",
+    "playground": "npm start --prefix packages/playground",
+    "postinstall": "lerna exec --parallel 'npm install' && lerna bootstrap && lerna run build",
+    "docs-build": "gitbook build",
+    "docs-serve": "gitbook serve",
+    "publish": "lerna publish -m 'chore(release): publish %s'"
+  },
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2",
+    "lerna": "^2.9.0"
+  }
+}

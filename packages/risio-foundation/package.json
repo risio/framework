@@ -1,0 +1,21 @@
+{
+  "name": "@risio/foundation",
+  "version": "0.0.22",
+  "description": "Foundation of the Risio Framework by Lifely",
+  "main": "src/index.ts",
+  "author": "Bryan te Beek <bryantebeek@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "inversify": "^4.11.1",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "@types/node": "^8.10.0"
+  }
+}
