@@ -1,15 +1,11 @@
 {
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "clean": "lerna run --parallel clean",
     "test": "npm run clean && lerna run --parallel test",
     "build": "lerna run --parallel build",
     "watch": "lerna run --parallel watch",
     "watch-test": "lerna run --parallel watch-test",
-    "playground": "npm start --prefix packages/playground",
     "postinstall": "lerna exec --parallel 'npm install' && lerna bootstrap && lerna run build",
     "docs-build": "gitbook build",
     "docs-serve": "gitbook serve",

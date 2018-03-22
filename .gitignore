@@ -5,6 +5,7 @@ packages/risio-*/dist
 node_modules
 npm-debug.log
 yarn-error.log
+yarn.lock
 
 # Lerna
 lerna-debug.log
