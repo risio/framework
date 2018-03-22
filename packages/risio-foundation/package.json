@@ -2,9 +2,10 @@
   "name": "@risio/foundation",
   "version": "0.0.22",
   "description": "Foundation of the Risio Framework by Lifely",
-  "main": "src/index.ts",
   "author": "Bryan te Beek <bryantebeek@gmail.com>",
   "license": "MIT",
+  "main": "dist/index.js",
+  "files": ["dist"],
   "publishConfig": {
     "access": "public"
   },
@@ -16,6 +17,8 @@
     "lodash": "^4.17.5"
   },
   "devDependencies": {
-    "@types/node": "^8.10.0"
+    "@types/jest": "^22.2.1",
+    "@types/node": "^8.10.0",
+    "jest": "^22.4.3"
   }
 }
