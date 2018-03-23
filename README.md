@@ -9,6 +9,10 @@
     </p>
 </p>
 
+## Roadmap
+
+- [ ] Website and documentation using https://www.gatsbyjs.org/
+
 ## Getting started
 
 > Install all dependencies first.
