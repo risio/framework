@@ -1,0 +1,15 @@
+#!/bin/sh
+
+CHANGED=$(git diff --name-only | grep CHANGELOG.md | tr -d '[:space:]')
+
+if [[ -z "$CHANGED" ]]; then
+    echo "CHANGELOG.md did not change, so there is nothing to do"
+    exit 1
+else
+    node_modules/.bin/lerna publish
+    ./node_modules/.bin/lerna-changelog --tag-from=v0.0.23 > CHANGELOG.md
+
+    git reset
+    git add CHANGELOG.md
+    git commit -m 'docs(changelog): update to latest version'
+fi
