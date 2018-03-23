@@ -7,12 +7,12 @@
     "watch": "lerna run --parallel watch",
     "watch-test": "lerna run --parallel watch-test",
     "postinstall": "lerna exec --parallel 'npm install' && lerna bootstrap && lerna run build",
-    "docs-build": "gitbook build",
-    "docs-serve": "gitbook serve",
     "publish": "lerna publish -m 'chore(release): publish %s'"
   },
   "devDependencies": {
-    "gitbook-cli": "^2.3.2",
     "lerna": "^2.9.0"
+  },
+  "dependencies": {
+    "gh-pages": "^1.1.0"
   }
 }
