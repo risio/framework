@@ -1,6 +1,13 @@
-# Node Framework (to be named) (Risio? <3)
-
-[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
+<p align="center">
+    <img src="https://avatars3.githubusercontent.com/u/37673741?s=200&v=4" height="60">
+    <h3 align="center">Node Framework (to be named) (Risio? <3)</h3>
+    <p align="center">Risio aims to provide a high level of abstraction to common logic used in web applications in a easy and fun-to-code-in way ;)<p>
+    <p align="center">
+        <a href="https://lernajs.io/">
+            <img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg" alt="Lerna">
+        </a>
+    </p>
+</p>
 
 ## Getting started
 
