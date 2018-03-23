@@ -7,7 +7,7 @@
     "watch": "lerna run --parallel watch",
     "watch-test": "lerna run --parallel watch-test",
     "postinstall": "lerna exec --parallel 'npm install' && lerna bootstrap && lerna run build",
-    "publish": "lerna publish -m 'chore(release): publish %s'"
+    "publish": "lerna publish && lerna-changelog --tag-from=v0.0.23 > CHANGELOG.md && git reset && git add CHANGELOG.md && git commit -m 'docs(changelog): update to latest version' && git push"
   },
   "devDependencies": {
     "lerna": "^2.9.0"

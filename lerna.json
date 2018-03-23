@@ -4,6 +4,12 @@
   "packages": [
     "packages/*"
   ],
+  "command": {
+    "publish": {
+      "allowBranch": "develop",
+      "message": "chore(release): publish %s"
+    }
+  },
   "changelog": {
     "repo": "risio/framework",
     "labels": {
