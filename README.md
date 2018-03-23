@@ -42,14 +42,6 @@ This is used to test out functionalities of the framework.
 
 - `npm run watch-test`
 
-## Documentation
-
-For now a [GitBook](https://github.com/GitbookIO/gitbook) is used to generate the framework handbook.
-
-> Serve the book to view it. This includes live reloading as well.
-
-- `npm run docs-serve`
-
 ## Structure
 
 Under the hood [Lerna](https://lernajs.io/) is used to split a single git repository into multiple npm packages. All packages can be found under the `packages` directory. Since the playground is marked as `private: true` in it's `package.json`, it's not published with the other modules.
