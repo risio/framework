@@ -11,15 +11,13 @@
     "watch": "lerna run --parallel watch",
     "watch-test": "lerna run --parallel watch-test",
     "postinstall": "lerna exec --parallel 'npm install' && lerna bootstrap && lerna run build",
-    "publish": ".bin/publish"
+    "publish": "lerna publish"
   },
   "devDependencies": {
     "lerna": "^2.9.0"
   },
   "dependencies": {
     "gh-pages": "^1.1.0",
-    "github-changes": "^1.1.2",
-    "lerna-changelog": "^0.7.0",
-    "pr-log": "^3.0.0"
+    "lerna-changelog": "^0.7.0"
   }
 }
