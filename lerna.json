@@ -14,8 +14,8 @@
     "repo": "risio/framework",
     "labels": {
       "enhancement": ":rocket: Enhancement",
-      "bug": ":bug: Bug Fix",
-      "docs": "Documentation :book:"
+      "bug": ":bug: Bugs",
+      "docs": ":book: Documentation"
     },
     "cacheDir": ".changelog"
   }
