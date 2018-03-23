@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "changelog": {
+    "repo": "risio/framework",
     "labels": {
       "enhancement": ":rocket: Enhancement",
       "bug": ":bug: Bug Fix"
