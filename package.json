@@ -11,7 +11,8 @@
     "watch": "lerna run --parallel watch",
     "watch-test": "lerna run --parallel watch-test",
     "postinstall": "lerna exec --parallel 'npm install' && lerna bootstrap && lerna run build",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "changelog": "lerna-changelog --tag-from=v0.0.23 > CHANGELOG.md"
   },
   "devDependencies": {
     "lerna": "^2.9.0"
