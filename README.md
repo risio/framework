@@ -1,18 +1,21 @@
 <p align="center">
     <img src="https://avatars3.githubusercontent.com/u/37673741?s=200&v=4" height="60">
-    <h3 align="center">Node Framework (to be named) (Risio? <3)</h3>
+    <h3 align="center">Risio - Node.js Framework</h3>
     <p align="center">Risio aims to provide a high level of abstraction to common logic used in web applications in a easy and fun-to-code-in way ;)<p>
     <p align="center">
         <a href="https://lernajs.io/">
             <img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg" alt="Lerna">
         </a>
+        <a href="https://travis-ci.org/risio/framework" target="_blank">
+            <img src="https://travis-ci.org/risio/framework.svg?branch=develop" alt="Travis">
+        </a>
+        <img src="https://badges.greenkeeper.io/risio/framework.svg" alt="Greenkeeper.io">
     </p>
 </p>
 
 ## Roadmap
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/risio/framework.svg)](https://greenkeeper.io/)
-
+- [ ] Initial 0.1.0 release
 - [ ] Website and documentation using https://www.gatsbyjs.org/
 
 ## Getting started
