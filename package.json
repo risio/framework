@@ -5,11 +5,9 @@
     "url": "https://github.com/risio/framework.git"
   },
   "scripts": {
-    "clean": "lerna run --parallel clean",
-    "test": "npm run clean && lerna run --parallel test",
     "build": "lerna run --parallel build",
-    "watch": "lerna run --parallel watch",
-    "watch-test": "lerna run --parallel watch-test",
+    "test": "npm run clean && lerna run --parallel test",
+    "test-watch": "lerna run --parallel test-watch",
     "postinstall": "lerna exec --parallel 'npm install' && lerna bootstrap && lerna run build",
     "publish": "lerna publish",
     "changelog": "lerna-changelog --tag-from=v0.0.23 > CHANGELOG.md",

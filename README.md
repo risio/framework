@@ -20,9 +20,9 @@
 
 ## Getting started
 
-> Install all dependencies first.
-
-- `npm install`
+- `npm install` - Install dependencies
+- `npm start` - Start watching the playground
+- `npm run test-watch` - Start watching the tests
 
 ## Playground
 
