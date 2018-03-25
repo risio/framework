@@ -1,7 +1,7 @@
 import * as path from 'path'
 
 import { FilesystemConfig, FilesystemType } from '../../filesystem'
-import { env } from '../../foundation'
+import { env } from '@risio/foundation'
 
 export const filesystemConfig: Readonly<FilesystemConfig> = {
     adapter: env('FILESYSTEM', 'local'),

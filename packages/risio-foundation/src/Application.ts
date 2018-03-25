@@ -1,3 +1,5 @@
+import 'reflect-metadata'
+
 import { interfaces } from 'inversify'
 
 import { ApplicationConfig } from './ApplicationConfig'
@@ -44,7 +46,7 @@ export class Application {
     }
 
     /**
-     * Boot the application. This should be called after all providers are registered.
+     * Boot the application. This should be called after all providers are registered
      */
     public boot() {
         this.serviceProviders.forEach(serviceProvider => {

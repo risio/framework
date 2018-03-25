@@ -30,12 +30,7 @@ This is used to test out functionalities of the framework.
 
 > This will compile and watch the Typescript files of each framework module so that they can be used inside the Playground.
 
-- `npm run watch`
-
-> Run the Playground. Edit `packages/playground/src/init.ts` to start experimenting.
-
-- Make a copy of `packages/playground/.env.example` to `packages/playground/.env`
-- `npm run playground`
+- `npm start`
 
 ## Testing
 

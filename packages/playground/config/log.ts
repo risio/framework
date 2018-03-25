@@ -1,4 +1,4 @@
-import { env } from '../../foundation'
+import { env } from '@risio/foundation'
 import { LoggerType, LoggerLevel } from '../../log'
 
 export const logConfig = Object.freeze({

@@ -1,6 +1,5 @@
 import * as path from 'path'
-
-import { ApplicationConfig, env } from '../../foundation'
+import { ApplicationConfig, env } from '@risio/foundation'
 
 export const applicationConfig: Readonly<ApplicationConfig> = Object.freeze({
     env: env('ENV', 'development'),

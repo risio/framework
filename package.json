@@ -12,7 +12,9 @@
     "watch-test": "lerna run --parallel watch-test",
     "postinstall": "lerna exec --parallel 'npm install' && lerna bootstrap && lerna run build",
     "publish": "lerna publish",
-    "changelog": "lerna-changelog --tag-from=v0.0.23 > CHANGELOG.md"
+    "changelog": "lerna-changelog --tag-from=v0.0.23 > CHANGELOG.md",
+    "playground": "lerna exec --scope=@risio/playground -- npm start",
+    "start": "npm run playground"
   },
   "devDependencies": {
     "lerna": "^2.9.0"
