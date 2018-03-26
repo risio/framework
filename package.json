@@ -7,7 +7,7 @@
   "scripts": {
     "build": "lerna run --parallel build",
     "test": "npm run clean && lerna run --parallel test",
-    "test-watch": "lerna run --parallel test-watch",
+    "test-watch": "lerna run --parallel --stream test-watch",
     "postinstall": "lerna exec --parallel 'npm install' && lerna bootstrap && lerna run build",
     "publish": "lerna publish",
     "changelog": "lerna-changelog --tag-from=v0.0.23 > CHANGELOG.md",

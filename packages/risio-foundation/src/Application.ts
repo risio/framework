@@ -4,6 +4,7 @@ import { interfaces } from 'inversify'
 
 import { ApplicationConfig } from './ApplicationConfig'
 import { ServiceProvider } from './ServiceProvider'
+import _ = require('lodash');
 
 export class Application {
 
@@ -42,6 +43,10 @@ export class Application {
      * Register a service provider with the application
      */
     public register(serviceProvider: ServiceProvider) {
+        if (this.serviceProviders.includes(serviceProvider)) {
+            throw new Error(`Service provider ${serviceProvider} was already registered`)
+        }
+
         this.serviceProviders.push(serviceProvider)
     }
 

@@ -14,7 +14,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "test-watch": "jest --watch --notify"
+    "test-watch": "jest --watch --coverage --notify"
   },
   "dependencies": {
     "inversify": "^4.11.1",
