@@ -1,41 +1,33 @@
 import 'reflect-metadata'
 
-import { interfaces } from 'inversify'
-
 import { ApplicationConfig } from './ApplicationConfig'
 import { ServiceProvider } from './ServiceProvider'
-import _ = require('lodash');
+import { Container } from './Container';
 
 export class Application {
 
     /**
      * The application configuration
      */
-    public config: ApplicationConfig
-
-    /**
-     * The path to the application root
-     */
-    public basePath: string
+    readonly config: ApplicationConfig
 
     /**
      * The service providers registered with the application
      */
-    public serviceProviders: ServiceProvider[] = []
+    readonly serviceProviders: ServiceProvider[] = []
 
     /**
      * The IoC container for this application
      */
-    public ioc: interfaces.Container
+    readonly ioc: Container
 
     /**
      * Create a new Application
      *
      * @param config
      */
-    constructor(container: interfaces.Container, config: ApplicationConfig) {
+    constructor(container: Container, config: ApplicationConfig) {
         this.config = config
-        this.basePath = this.config.basePath
         this.ioc = container
     }
 
@@ -44,7 +36,7 @@ export class Application {
      */
     public register(serviceProvider: ServiceProvider) {
         if (this.serviceProviders.includes(serviceProvider)) {
-            throw new Error(`Service provider ${serviceProvider} was already registered`)
+            throw new Error(`Service provider ${serviceProvider.constructor.name} was already registered`)
         }
 
         this.serviceProviders.push(serviceProvider)
