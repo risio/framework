@@ -7,12 +7,13 @@
     "start": "nodemon --ignore ./dist --ignore ./node_modules --watch ./ --exec ts-node --inspect -r tsconfig-paths/register src/bootstrap.ts"
   },
   "dependencies": {
-    "@risio/foundation": "^0.0.26",
-    "nodemon": "^1.17.2",
-    "tsconfig-paths": "^3.1.3"
+    "@risio/foundation": "^0.0.26"
   },
   "devDependencies": {
     "@types/node": "^8.10.0",
-    "typescript": "^2.7.2"
+    "typescript": "^2.7.2",
+    "nodemon": "^1.17.2",
+    "ts-node": "^5.0.1",
+    "tsconfig-paths": "^3.1.3"
   }
 }

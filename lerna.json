@@ -2,7 +2,8 @@
   "lerna": "2.9.0",
   "version": "0.0.26",
   "packages": [
-    "packages/*"
+    "packages/*",
+    "playground"
   ],
   "command": {
     "publish": {
