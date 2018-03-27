@@ -1,7 +1,7 @@
 import * as path from 'path'
-import { ApplicationConfig, env } from '@risio/foundation'
+import { Application, ApplicationConfig, env } from '@risio/foundation'
 
-export const applicationConfig: Readonly<ApplicationConfig> = Object.freeze({
+export const applicationConfig = Application.createConfigObject<ApplicationConfig>({
     env: env('ENV', 'development'),
     url: env('APP_URL', 'http://localhost:3000'),
     serverUrl: env('APP_SERVER_URL', 'http://localhost:5000'),
