@@ -1,7 +1,7 @@
 import { MailerType, MailerConfig } from '../../mail'
-import { env } from '@risio/foundation'
+import { Application, env } from '@risio/foundation'
 
-export const mailConfig: MailerConfig = Object.freeze({
+export const mailConfig = Application.createConfigObject<MailerConfig>({
     defaults: {
         fromName: 'John Doe',
         fromEmail: 'noreply@example.com'

@@ -28,6 +28,13 @@ export class Application {
     public ioc: interfaces.Container
 
     /**
+     * Creates a readonly config object.
+     */
+    public static createConfigObject<TConfig extends object>(config: TConfig): Readonly<TConfig> {
+        return Object.freeze(config)
+    }
+
+    /**
      * Create a new Application
      *
      * @param config

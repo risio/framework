@@ -1,9 +1,9 @@
 import * as path from 'path'
 
 import { FilesystemConfig, FilesystemType } from '../../filesystem'
-import { env } from '@risio/foundation'
+import { Application, env } from '@risio/foundation'
 
-export const filesystemConfig: Readonly<FilesystemConfig> = {
+export const filesystemConfig = Application.createConfigObject<FilesystemConfig>({
     adapter: env('FILESYSTEM', 'local'),
 
     adapters: {
@@ -22,4 +22,4 @@ export const filesystemConfig: Readonly<FilesystemConfig> = {
             basePath: 'public'
         }
     }
-},
+})
