@@ -3,5 +3,4 @@ export const IOC = {
 }
 
 export * from './FilesystemConfig'
-export { Filesystem } from './Filesystem'
 export { FilesystemServiceProvider } from './FilesystemServiceProvider'

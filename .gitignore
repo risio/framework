@@ -1,5 +1,4 @@
 # Builds
-packages/dist
 packages/risio-*/dist
 
 # Dependencies
@@ -10,7 +9,11 @@ packages/risio-*/dist
 
 # Lerna
 lerna-debug.log
+.changelog
 
 # IDE's
 .vscode
 .idea
+
+# Tests
+**/coverage

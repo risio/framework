@@ -1,15 +1,22 @@
 {
   "lerna": "2.9.0",
-  "version": "0.0.25",
+  "version": "0.0.27",
   "packages": [
+    "playground",
     "packages/*"
   ],
+  "command": {
+    "publish": {
+      "allowBranch": "develop",
+      "message": "chore(release): publish %s"
+    }
+  },
   "changelog": {
     "repo": "risio/framework",
     "labels": {
-      "enhancement": ":rocket: Enhancement",
-      "bug": ":bug: Bug Fix",
-      "docs": "Documentation :book:"
+      "feature": "Features",
+      "bug": "Bugs",
+      "docs": "Documentation"
     },
     "cacheDir": ".changelog"
   }

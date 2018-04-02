@@ -1,26 +1,24 @@
 {
-  "name": "@risio/foundation",
-  "version": "0.0.27",
-  "description": "Foundation of the Risio Framework by Lifely",
+  "name": "@risio/cache",
+  "version": "0.0.26",
+  "description": "Cache of the Risio Framework by Lifely",
   "author": "Bryan te Beek <bryantebeek@gmail.com>",
   "license": "MIT",
-  "main": "dist/src/index.js",
+  "main": "dist/index.js",
   "files": [
-    "dist/src"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "build": "tsc",
-    "build-watch": "tsc -w",
     "test": "jest",
-    "test-watch": "jest --watchAll --coverage --notify"
+    "test-watch": "jest --watch --coverage --notify"
   },
   "dependencies": {
-    "inversify": "^4.11.1",
-    "lodash": "^4.17.5",
-    "reflect-metadata": "^0.1.12"
+    "ioredis": "^3.2.2",
+    "lodash": "^4.17.5"
   },
   "devDependencies": {
     "@types/jest": "^22.2.1",

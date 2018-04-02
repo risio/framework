@@ -1,38 +1,33 @@
-import { interfaces } from 'inversify'
+import 'reflect-metadata'
 
 import { ApplicationConfig } from './ApplicationConfig'
 import { ServiceProvider } from './ServiceProvider'
+import { Container } from './Container';
 
 export class Application {
 
     /**
      * The application configuration
      */
-    public config: ApplicationConfig
-
-    /**
-     * The path to the application root
-     */
-    public basePath: string
+    readonly config: ApplicationConfig
 
     /**
      * The service providers registered with the application
      */
-    public serviceProviders: ServiceProvider[] = []
+    readonly serviceProviders: ServiceProvider[] = []
 
     /**
      * The IoC container for this application
      */
-    public ioc: interfaces.Container
+    readonly ioc: Container
 
     /**
      * Create a new Application
      *
      * @param config
      */
-    constructor(container: interfaces.Container, config: ApplicationConfig) {
+    constructor(container: Container, config: ApplicationConfig) {
         this.config = config
-        this.basePath = this.config.basePath
         this.ioc = container
     }
 
@@ -40,11 +35,15 @@ export class Application {
      * Register a service provider with the application
      */
     public register(serviceProvider: ServiceProvider) {
+        if (this.serviceProviders.includes(serviceProvider)) {
+            throw new Error(`Service provider ${serviceProvider.constructor.name} was already registered`)
+        }
+
         this.serviceProviders.push(serviceProvider)
     }
 
     /**
-     * Boot the application. This should be called after all providers are registered.
+     * Boot the application. This should be called after all providers are registered
      */
     public boot() {
         this.serviceProviders.forEach(serviceProvider => {

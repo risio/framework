@@ -7,13 +7,13 @@
     "target": "esnext",
     "noUnusedLocals": true,
     "lib": ["esnext"],
-    "outDir": "dist",
-    "baseUrl": "src",
-    "declaration": true
+    "declaration": true,
+    "paths": {
+        "@risio/*": ["../../risio-*"]
+    }
   },
   "exclude": [
-    "node_modules",
-    "dist",
-    "**/test/**"
+    "**/node_modules",
+    "**/dist"
   ]
 }

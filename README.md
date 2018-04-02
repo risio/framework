@@ -1,23 +1,28 @@
 <p align="center">
     <img src="https://avatars3.githubusercontent.com/u/37673741?s=200&v=4" height="60">
-    <h3 align="center">Node Framework (to be named) (Risio? <3)</h3>
+    <h3 align="center">Risio - Node.js Framework</h3>
     <p align="center">Risio aims to provide a high level of abstraction to common logic used in web applications in a easy and fun-to-code-in way ;)<p>
     <p align="center">
         <a href="https://lernajs.io/">
             <img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg" alt="Lerna">
         </a>
+        <a href="https://travis-ci.org/risio/framework" target="_blank">
+            <img src="https://travis-ci.org/risio/framework.svg?branch=develop" alt="Travis">
+        </a>
+        <img src="https://badges.greenkeeper.io/risio/framework.svg" alt="Greenkeeper.io">
     </p>
 </p>
 
 ## Roadmap
 
+- [ ] Initial 0.1.0 release
 - [ ] Website and documentation using https://www.gatsbyjs.org/
 
 ## Getting started
 
-> Install all dependencies first.
-
-- `npm install`
+- `npm install` - Install dependencies
+- `npm start` - Start watching the playground
+- `npm run test-watch` - Start watching the tests
 
 ## Playground
 
@@ -25,12 +30,7 @@ This is used to test out functionalities of the framework.
 
 > This will compile and watch the Typescript files of each framework module so that they can be used inside the Playground.
 
-- `npm run watch`
-
-> Run the Playground. Edit `packages/playground/src/init.ts` to start experimenting.
-
-- Make a copy of `packages/playground/.env.example` to `packages/playground/.env`
-- `npm run playground`
+- `npm start`
 
 ## Testing
 
