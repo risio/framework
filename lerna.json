@@ -1,14 +1,14 @@
 {
   "lerna": "2.9.0",
-  "version": "0.0.28",
+  "version": "0.0.30",
   "packages": [
     "playground",
     "packages/*"
   ],
   "command": {
     "publish": {
-      "allowBranch": "master",
-      "message": "chore(release): publish %s"
+      "skipGit": true,
+      "allowBranch": "master"
     }
   },
   "changelog": {
