@@ -6,12 +6,13 @@
   },
   "scripts": {
     "build": "lerna run --parallel build",
+    "build-watch": "lerna run --parallel build-watch",
     "test": "npm run clean && lerna run --parallel test",
     "test-watch": "lerna run --parallel --stream test-watch",
     "postinstall": "lerna exec --parallel 'npm install' && lerna bootstrap && lerna run build",
     "publish": "lerna publish",
     "changelog": "lerna-changelog --tag-from=v0.0.23 > CHANGELOG.md",
-    "playground": "lerna exec --scope=@risio/playground -- npm start",
+    "playground": "lerna bootstrap && lerna exec --scope=playground -- npm start",
     "start": "npm run playground"
   },
   "devDependencies": {

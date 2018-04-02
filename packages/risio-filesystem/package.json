@@ -1,7 +1,7 @@
 {
-  "name": "@risio/foundation",
+  "name": "@risio/filesystem",
   "version": "0.0.26",
-  "description": "Foundation of the Risio Framework by Lifely",
+  "description": "Filesystem of the Risio Framework by Lifely",
   "author": "Bryan te Beek <bryantebeek@gmail.com>",
   "license": "MIT",
   "main": "dist/src/index.js",
@@ -18,9 +18,10 @@
     "test-watch": "jest --watchAll --coverage --notify"
   },
   "dependencies": {
+    "@risio/foundation": "^0.0.26",
+    "aws-sdk": "^2.213.1",
     "inversify": "^4.11.1",
-    "lodash": "^4.17.5",
-    "reflect-metadata": "^0.1.12"
+    "mime": "^2.2.0"
   },
   "devDependencies": {
     "@types/jest": "^22.2.1",

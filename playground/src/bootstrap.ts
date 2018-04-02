@@ -1,18 +1,13 @@
-// import { config } from './config'
-import { applicationConfig } from '../config/application'
-// import { filesystemConfig } from './config/filesystem'
-// import { logConfig } from './config/log'
-// import { mailConfig } from './config/mail'
+import { Filesystem } from '@risio/foundation'
 
+import { applicationConfig } from '../config/application'
+import { filesystemConfig } from '../config/filesystem'
 import { app as application } from './app'
 
 // import { Manager, Scheduler } from '../console'
 // import { Cache } from '../cache'
-// import { Filesystem } from '../filesystem'
-// import { Logger } from '../log'
-// import { Mailer, Mail } from '../mail'
 
-; (async () => {
+(async () => {
     console.log('Application starting')
 
     process.on('uncaughtException', (uncaughtException: Error) => {
@@ -27,7 +22,7 @@ import { app as application } from './app'
 
     // const log = (adapter?: string) => app.ioc.getNamed<Logger>(Symbol.for('Risio:Logger'), adapter ? adapter : logConfig.adapter)
     // const mailer = (adapter?: string) => app.ioc.getNamed<Mailer>(Symbol.for('Risio:Mailer'), adapter ? adapter : mailConfig.adapter)
-    // const filesystem = (adapter?: string) => app.ioc.getNamed<Filesystem>(Symbol.for('Risio:Filesystem'), adapter ? adapter : filesystemConfig.adapter)
+    const filesystem = (adapter?: string) => app.ioc.getNamed<Filesystem>(Symbol.for('Risio:Filesystem'), adapter ? adapter : filesystemConfig.adapter)
 
     // const cache = (driver?: string) => app.make<Cache>(`cache.${driver ? driver : app.config.cache.driver}`)
 
@@ -44,13 +39,10 @@ import { app as application } from './app'
     //     html: 'test content'
     // })
 
-    // await filesystem().write('test.txt', 'foo')
+    await filesystem().write('test.txt', 'foo')
     // log().debug('Written "foo" to test.txt')
 
-    // const result = await filesystem().read('test.txt')
-    // log().debug(`Read "${result} from test.txt`)
-
-    console.log(app.config)
+    await filesystem().read('test.txt')
 
     console.log('Application loaded')
 })()

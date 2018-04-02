@@ -9,7 +9,7 @@
     "lib": ["esnext"],
     "declaration": true,
     "paths": {
-        "@risio/*": ["../../risio-*/src"]
+        "@risio/*": ["../../risio-*"]
     }
   },
   "exclude": [

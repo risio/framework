@@ -1,8 +1,7 @@
+import { Filesystem } from '@risio/foundation'
 import * as mime from 'mime'
 import * as path from 'path'
 import { Readable } from 'stream'
-
-import { Filesystem } from '../Filesystem'
 
 export abstract class BaseFilesystemAdapter implements Filesystem {
 

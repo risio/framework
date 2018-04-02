@@ -1,9 +1,9 @@
+import { Application, Filesystem, ServiceProvider } from '@risio/foundation'
+
 import { IOC } from '.'
-import { Application, ServiceProvider } from '../foundation'
-import { Filesystem } from './Filesystem'
+import { LocalFilesystemAdapter, LocalFilesystemAdapterConfig } from './adapters/LocalFilesystemAdapter'
+import { S3FilesystemAdapter, S3FilesystemAdapterConfig } from './adapters/S3FilesystemAdapter'
 import { FilesystemConfig, FilesystemType } from './FilesystemConfig'
-import { LocalFilesystemAdapter } from './adapters/LocalFilesystemAdapter'
-import { S3FilesystemAdapter } from './adapters/S3FilesystemAdapter'
 
 export class FilesystemServiceProvider extends ServiceProvider {
 
@@ -19,8 +19,8 @@ export class FilesystemServiceProvider extends ServiceProvider {
                 app.ioc.bind<Filesystem>(IOC.Filesystem)
                     .toDynamicValue(() => {
                         switch (config.adapter) {
-                            case FilesystemType.LOCAL: return new LocalFilesystemAdapter(config)
-                            case FilesystemType.S3: return new S3FilesystemAdapter(config)
+                            case FilesystemType.LOCAL: return new LocalFilesystemAdapter(config as LocalFilesystemAdapterConfig)
+                            case FilesystemType.S3: return new S3FilesystemAdapter(config as S3FilesystemAdapterConfig)
                         }
                     })
                     .inSingletonScope()

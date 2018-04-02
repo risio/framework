@@ -1,10 +1,11 @@
-import { Container } from 'inversify'
+import { FilesystemServiceProvider } from '@risio/filesystem'
 import { Application, ApplicationConfig } from '@risio/foundation'
+import { Container } from 'inversify'
 
-// import { FilesystemServiceProvider } from '../filesystem'
+import { filesystemConfig } from '../config/filesystem'
+
 // import { LoggerServiceProvider } from '../log'
 // import { MailerServiceProvider } from '../mail'
-// import { filesystemConfig } from '../playground/config/filesystem'
 // import { logConfig } from './config/log'
 // import { mailConfig } from './config/mail'
 
@@ -16,9 +17,9 @@ export const app = (applicationConfig?: ApplicationConfig) => {
 
         instance = new Application(container, applicationConfig)
 
+        instance.register(new FilesystemServiceProvider(filesystemConfig))
         // instance.register(new LoggerServiceProvider(logConfig))
         // instance.register(new MailerServiceProvider(mailConfig))
-        // instance.register(new FilesystemServiceProvider(filesystemConfig))
         // instance.register(new CacheServiceProvider)
         // instance.register(new ConsoleServiceProvider)
 
