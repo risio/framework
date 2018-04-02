@@ -1,13 +1,13 @@
 {
   "lerna": "2.9.0",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "packages": [
     "playground",
     "packages/*"
   ],
   "command": {
     "publish": {
-      "allowBranch": "develop",
+      "allowBranch": "master",
       "message": "chore(release): publish %s"
     }
   },
