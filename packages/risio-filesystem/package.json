@@ -5,6 +5,7 @@
   "author": "Bryan te Beek <bryantebeek@gmail.com>",
   "license": "MIT",
   "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "files": [
     "dist/src"
   ],
