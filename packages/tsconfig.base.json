@@ -8,10 +8,16 @@
     "noUnusedLocals": true,
     "lib": ["esnext"],
     "declaration": true,
+    "outDir": "dist",
+    "baseUrl": "src",
     "paths": {
         "@risio/*": ["../../risio-*"]
     }
   },
+  "include": [
+      "src/**/*",
+      "test/**/*"
+  ],
   "exclude": [
     "**/node_modules",
     "**/dist"

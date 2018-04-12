@@ -2,7 +2,11 @@ module.exports = {
     transform: {
         "^.+\\.tsx?$": "ts-jest"
     },
-    testRegex: ".*/test/(.*/)?.*.ts",
+    testRegex: "test/(.*/)?.*.ts",
+    testPathIgnorePatterns: [
+        "<rootDir>/dist/",
+        "<rootDir>/node_modules/"
+    ],
     moduleFileExtensions: [
         "ts",
         "tsx",

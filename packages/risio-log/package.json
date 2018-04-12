@@ -1,0 +1,39 @@
+{
+  "name": "@risio/log",
+  "version": "0.0.32",
+  "description": "Log of the Risio Framework by Lifely",
+  "author": "Bryan te Beek <bryantebeek@gmail.com>",
+  "license": "MIT",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "dist/src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build-watch": "tsc -w",
+    "test": "jest",
+    "test-watch": "jest --watchAll --coverage --notify"
+  },
+  "dependencies": {
+    "@risio/foundation": "^0.0.32",
+    "chalk": "^2.3.2",
+    "inversify": "^4.11.1",
+    "lodash": "^4.17.5",
+    "reflect-metadata": "^0.1.12",
+    "winston": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/winston": "^2.3.9",
+    "@types/jest": "^22.2.1",
+    "@types/lodash": "^4.14.106",
+    "@types/node": "^8.10.0",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.7.2"
+  }
+}

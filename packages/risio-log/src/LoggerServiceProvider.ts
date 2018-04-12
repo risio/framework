@@ -1,7 +1,7 @@
+import { Application, ServiceProvider, Logger } from '@risio/foundation'
+
 import { IOC } from '.'
-import { Application, ServiceProvider } from '../foundation'
 import { ConsoleLoggerAdapter } from './adapters/ConsoleLoggerAdapter'
-import { Logger } from './Logger'
 import { LoggerConfig, LoggerType } from './LoggerConfig'
 
 export class LoggerServiceProvider extends ServiceProvider {

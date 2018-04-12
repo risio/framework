@@ -7,8 +7,10 @@
     "start": "nodemon --ignore ./dist --ignore ./node_modules --watch ./ --exec ts-node --inspect -r tsconfig-paths/register src/bootstrap.ts"
   },
   "dependencies": {
-    "@risio/filesystem": "^0.0.30",
-    "@risio/foundation": "^0.0.30",
+    "@risio/filesystem": "^0.0.32",
+    "@risio/foundation": "^0.0.32",
+    "@risio/log": "^0.0.32",
+    "inversify": "^4.11.1",
     "ts-node": "^5.0.1"
   },
   "devDependencies": {

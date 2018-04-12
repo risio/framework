@@ -7,7 +7,7 @@
   "scripts": {
     "build": "lerna run --parallel build",
     "build-watch": "lerna run --parallel build-watch",
-    "test": "npm run clean && lerna run --parallel test",
+    "test": "lerna run --parallel test",
     "test-watch": "lerna run --parallel --stream test-watch",
     "postinstall": "lerna exec --parallel 'npm install' && lerna bootstrap && lerna run build",
     "publish": "lerna publish",
