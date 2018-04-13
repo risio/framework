@@ -1,0 +1,37 @@
+{
+  "name": "@risio/mail",
+  "version": "0.0.32",
+  "description": "Mail of the Risio Framework by Lifely",
+  "author": "Bryan te Beek <bryantebeek@gmail.com>",
+  "license": "MIT",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "dist/src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build-watch": "tsc -w",
+    "test": "jest",
+    "test-watch": "jest --watchAll --coverage --notify"
+  },
+  "dependencies": {
+    "@risio/foundation": "^0.0.32",
+    "@risio/log": "^0.0.32",
+    "inversify": "^4.11.1",
+    "nodemailer": "^4.6.4",
+    "outdent": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.1",
+    "@types/lodash": "^4.14.106",
+    "@types/node": "^8.10.0",
+    "@types/nodemailer": "^4.6.0",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.7.2"
+  }
+}

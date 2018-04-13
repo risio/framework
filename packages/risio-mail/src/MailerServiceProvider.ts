@@ -1,8 +1,9 @@
+import { Application, Mailer, ServiceProvider } from '@risio/foundation'
+import { ConsoleLoggerAdapter, LoggerLevel } from '@risio/log'
+
 import { IOC } from '.'
-import { Application, ServiceProvider } from '../foundation'
-import { ConsoleMailerAdapter } from './adapters/ConsoleMailerAdapter'
-import { SmtpMailerAdapter } from './adapters/SmtpMailerAdapter'
-import { Mailer } from './Mailer'
+import { ConsoleMailerAdapter, ConsoleMailerAdapterConfig } from './adapters/ConsoleMailerAdapter'
+import { SmtpMailerAdapter, SmtpMailerAdapterConfig } from './adapters/SmtpMailerAdapter'
 import { MailerConfig, MailerType } from './MailerConfig'
 
 export class MailerServiceProvider extends ServiceProvider {
@@ -19,8 +20,8 @@ export class MailerServiceProvider extends ServiceProvider {
                 app.ioc.bind<Mailer>(IOC.Mailer)
                     .toDynamicValue(() => {
                         switch (config.adapter) {
-                            case MailerType.CONSOLE: return new ConsoleMailerAdapter(app.ioc.get(Symbol.for('Risio:Logger')))
-                            case MailerType.SMTP: return new SmtpMailerAdapter(config)
+                            case MailerType.CONSOLE: return new ConsoleMailerAdapter(config as ConsoleMailerAdapterConfig, new ConsoleLoggerAdapter({ level: LoggerLevel.DEBUG }))
+                            case MailerType.SMTP: return new SmtpMailerAdapter(config as SmtpMailerAdapterConfig)
                         }
                     })
                     .inSingletonScope()

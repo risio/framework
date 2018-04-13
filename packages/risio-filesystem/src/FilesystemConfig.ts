@@ -6,15 +6,11 @@ export enum FilesystemType {
     S3 = 's3'
 }
 
-export type FilesystemAdapterConfig =
-    LocalFilesystemAdapterConfig |
-    S3FilesystemAdapterConfig
-
 export class FilesystemConfig {
     public log?: boolean = false
 
     public adapter: string
     public adapters: {
-        [s: string]: FilesystemAdapterConfig
+        [s: string]: (LocalFilesystemAdapterConfig | S3FilesystemAdapterConfig) & { adapter: FilesystemType }
     }
 }

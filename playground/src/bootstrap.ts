@@ -1,8 +1,9 @@
-import { Filesystem } from '@risio/foundation'
+import { Logger, Mailer, Filesystem } from '@risio/foundation'
 
-import { applicationConfig } from '../config/application'
-import { filesystemConfig } from '../config/filesystem'
 import { logConfig } from '../config/log'
+import { mailConfig } from '../config/mail'
+import { filesystemConfig } from '../config/filesystem'
+import { applicationConfig } from '../config/application'
 
 import { app as application } from './app'
 
@@ -24,7 +25,7 @@ import { app as application } from './app'
 
     const log = (adapter?: string) => app.ioc.getNamed<Logger>(Symbol.for('Risio:Logger'), adapter ? adapter : logConfig.adapter)
     const filesystem = (adapter?: string) => app.ioc.getNamed<Filesystem>(Symbol.for('Risio:Filesystem'), adapter ? adapter : filesystemConfig.adapter)
-    // const mailer = (adapter?: string) => app.ioc.getNamed<Mailer>(Symbol.for('Risio:Mailer'), adapter ? adapter : mailConfig.adapter)
+    const mailer = (adapter?: string) => app.ioc.getNamed<Mailer>(Symbol.for('Risio:Mailer'), adapter ? adapter : mailConfig.adapter)
 
     // const cache = (driver?: string) => app.make<Cache>(`cache.${driver ? driver : app.config.cache.driver}`)
 
@@ -35,11 +36,13 @@ import { app as application } from './app'
     log().info('info')
     log().warn('warn')
 
-    // await mailer().send({
-    //     to: 'bryan@lifely.nl',
-    //     subject: 'Awesome',
-    //     html: 'test content'
-    // })
+    await mailer().send({
+        to: 'bryan@lifely.nl',
+        fromEmail: 'info@lifely.nl',
+        fromName: 'Simon',
+        subject: 'Awesome',
+        html: 'test content'
+    })
 
     await filesystem().write('test.txt', 'foo')
     await filesystem().read('test.txt')

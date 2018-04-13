@@ -10,6 +10,7 @@
     "@risio/filesystem": "^0.0.32",
     "@risio/foundation": "^0.0.32",
     "@risio/log": "^0.0.32",
+    "@risio/mail": "^0.0.32",
     "inversify": "^4.11.1",
     "ts-node": "^5.0.1"
   },

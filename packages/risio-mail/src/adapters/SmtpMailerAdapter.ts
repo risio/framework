@@ -1,11 +1,7 @@
 import * as nodemailer from 'nodemailer'
-
-import { Mail } from '../Mail'
-import { Mailer } from '../Mailer'
-import { MailerType } from '../MailerConfig'
+import { Mail, Mailer } from '@risio/foundation'
 
 export interface SmtpMailerAdapterConfig {
-    adapter: MailerType.SMTP
     host: string
     port: number
     secure: boolean

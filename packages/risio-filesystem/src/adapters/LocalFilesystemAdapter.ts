@@ -4,10 +4,8 @@ import { Readable } from 'stream'
 import * as url from 'url'
 
 import { BaseFilesystemAdapter } from './BaseFilesystemAdapter'
-import { FilesystemType } from '../FilesystemConfig'
 
 export interface LocalFilesystemAdapterConfig {
-    adapter: FilesystemType.LOCAL
     basePath: string
     baseUrl?: string
 }

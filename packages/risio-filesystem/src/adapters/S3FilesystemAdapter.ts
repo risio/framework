@@ -4,10 +4,8 @@ import * as path from 'path'
 import { Readable } from 'stream'
 
 import { BaseFilesystemAdapter } from './BaseFilesystemAdapter'
-import { FilesystemType } from '../FilesystemConfig'
 
 export interface S3FilesystemAdapterConfig {
-    adapter: FilesystemType.S3
     bucket: string
     region: string
     accessKeyId: string

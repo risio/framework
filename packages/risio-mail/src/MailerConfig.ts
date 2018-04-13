@@ -14,6 +14,6 @@ export interface MailerConfig {
 
     adapter: string
     adapters: {
-        [s: string]: SmtpMailerAdapterConfig | ConsoleMailerAdapterConfig
+        [s: string]: (SmtpMailerAdapterConfig | ConsoleMailerAdapterConfig) & { adapter: MailerType }
     }
 }
