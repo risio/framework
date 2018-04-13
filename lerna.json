@@ -1,6 +1,6 @@
 {
   "lerna": "2.9.0",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "packages": [
     "playground",
     "packages/*"
@@ -8,7 +8,7 @@
   "command": {
     "publish": {
       "skipGit": true,
-      "allowBranch": "master" 
+      "allowBranch": "master"
     }
   },
   "changelog": {
