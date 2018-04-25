@@ -16,6 +16,7 @@
 ## Roadmap
 
 - [ ] Initial 0.1.0 release
+- [ ] Add Greenkeeper https://greenkeeper.io/
 - [ ] Website and documentation using https://www.gatsbyjs.org/
 
 ## Getting started
@@ -45,8 +46,3 @@ This is used to test out functionalities of the framework.
 ## Structure
 
 Under the hood [Lerna](https://lernajs.io/) is used to split a single git repository into multiple npm packages. All packages can be found under the `packages` directory. Since the playground is marked as `private: true` in it's `package.json`, it's not published with the other modules.
-
-## Modules
-
-- `risio-config` - Configuration management (currently reads from process.ENV all `RISIO_` prefixed variables)
-- `risio-mail` - Easily send emails using different transports
