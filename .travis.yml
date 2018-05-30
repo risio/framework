@@ -1,8 +1,0 @@
-language: node_js
-
-node_js:
-  - "node"
-  - "lts/*"
-
-script:
-  - "./node_modules/.bin/lerna exec -- npm run test"
