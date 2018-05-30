@@ -11,5 +11,8 @@ jobs:
     steps:
       - checkout
 
-      - run: "npm install"
+      - run: "npm install --ignore-scripts"
+      - run: "./node_modules/.bin/lerna exec -- npm install"
+      - run: "./node_modules/.bin/lerna bootstrap"
+      - run: "./node_modules/.bin/lerna exec -- npm run build"
       - run: "./node_modules/.bin/lerna exec -- npm run test"
