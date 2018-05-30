@@ -1,0 +1,15 @@
+# https://github.com/circleci/frontend/blob/master/.circleci/config.yml
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node:8.11
+
+    working_directory: ~/app
+
+    steps:
+      - checkout
+
+      - run: "npm install"
+      - run: "./node_modules/.bin/lerna exec -- npm run test"
