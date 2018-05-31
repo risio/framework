@@ -1,5 +1,5 @@
-import { MailerType, MailerConfig } from '../../mail'
 import { env } from '@risio/foundation'
+import { MailerType, MailerConfig } from '@risio/mail'
 
 export const mailConfig: MailerConfig = Object.freeze({
     defaults: {

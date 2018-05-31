@@ -1,7 +1,10 @@
-import { Filesystem } from '@risio/foundation'
+import { Logger, Mailer, Filesystem } from '@risio/foundation'
 
-import { applicationConfig } from '../config/application'
+import { logConfig } from '../config/log'
+import { mailConfig } from '../config/mail'
 import { filesystemConfig } from '../config/filesystem'
+import { applicationConfig } from '../config/application'
+
 import { app as application } from './app'
 
 // import { Manager, Scheduler } from '../console'
@@ -20,28 +23,28 @@ import { app as application } from './app'
 
     const app = application(applicationConfig)
 
-    // const log = (adapter?: string) => app.ioc.getNamed<Logger>(Symbol.for('Risio:Logger'), adapter ? adapter : logConfig.adapter)
-    // const mailer = (adapter?: string) => app.ioc.getNamed<Mailer>(Symbol.for('Risio:Mailer'), adapter ? adapter : mailConfig.adapter)
+    const log = (adapter?: string) => app.ioc.getNamed<Logger>(Symbol.for('Risio:Logger'), adapter ? adapter : logConfig.adapter)
     const filesystem = (adapter?: string) => app.ioc.getNamed<Filesystem>(Symbol.for('Risio:Filesystem'), adapter ? adapter : filesystemConfig.adapter)
+    const mailer = (adapter?: string) => app.ioc.getNamed<Mailer>(Symbol.for('Risio:Mailer'), adapter ? adapter : mailConfig.adapter)
 
     // const cache = (driver?: string) => app.make<Cache>(`cache.${driver ? driver : app.config.cache.driver}`)
 
     // const commandManager = () => app.make<Manager>('console.manager')
     // const commandScheduler = () => app.make<Scheduler>('console.scheduler')
 
-    // log().debug('debug')
-    // log().info('info')
-    // log().warn('warn')
+    log().debug('debug')
+    log().info('info')
+    log().warn('warn')
 
-    // await mailer().send({
-    //     to: 'bryan@lifely.nl',
-    //     subject: 'Awesome',
-    //     html: 'test content'
-    // })
+    await mailer().send({
+        to: 'bryan@lifely.nl',
+        fromEmail: 'info@lifely.nl',
+        fromName: 'Simon',
+        subject: 'Awesome',
+        html: 'test content'
+    })
 
     await filesystem().write('test.txt', 'foo')
-    // log().debug('Written "foo" to test.txt')
-
     await filesystem().read('test.txt')
 
     console.log('Application loaded')

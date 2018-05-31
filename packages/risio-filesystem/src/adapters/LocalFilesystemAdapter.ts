@@ -3,12 +3,9 @@ import * as path from 'path'
 import { Readable } from 'stream'
 import * as url from 'url'
 
-import { FilesystemType } from '@risio/filesystem'
-
 import { BaseFilesystemAdapter } from './BaseFilesystemAdapter'
 
 export interface LocalFilesystemAdapterConfig {
-    adapter: FilesystemType.LOCAL
     basePath: string
     baseUrl?: string
 }

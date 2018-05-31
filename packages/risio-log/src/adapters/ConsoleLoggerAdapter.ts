@@ -1,11 +1,10 @@
 import chalk from 'chalk'
 import * as winston from 'winston'
+import { Logger } from '@risio/foundation'
 
-import { Logger } from '..'
-import { LoggerLevel, LoggerType } from '../LoggerConfig'
+import { LoggerLevel } from '../LoggerConfig'
 
 export interface ConsoleLoggerAdapterConfig {
-    adapter: LoggerType.CONSOLE
     level: LoggerLevel
 }
 

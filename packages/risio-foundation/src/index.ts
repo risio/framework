@@ -7,4 +7,7 @@ export { ServiceProvider } from './ServiceProvider'
 export { Container } from './Container'
 
 // Contracts
+export { Logger } from './contracts/Logger'
 export { Filesystem } from './contracts/Filesystem'
+export { Mail } from './contracts/Mail'
+export { Mailer } from './contracts/Mailer'

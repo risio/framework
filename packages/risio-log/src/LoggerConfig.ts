@@ -14,6 +14,6 @@ export enum LoggerType {
 export interface LoggerConfig {
     adapter: string
     adapters: {
-        [s: string]: ConsoleLoggerAdapterConfig
+        [s: string]: ConsoleLoggerAdapterConfig & { adapter: LoggerType }
     }
 }

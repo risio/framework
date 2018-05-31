@@ -1,20 +1,21 @@
 import chalk from 'chalk'
 import outdent from 'outdent'
-
-import { Logger } from '../../log'
-import { Mail } from '../Mail'
-import { Mailer } from '../Mailer'
-import { MailerType } from '../MailerConfig'
+import { Mail, Mailer, Logger } from '@risio/foundation'
 
 export interface ConsoleMailerAdapterConfig {
-    adapter: MailerType.CONSOLE
+
 }
 
 export class ConsoleMailerAdapter implements Mailer {
 
-    constructor(private logger: Logger) {}
+    constructor(
+        private config: ConsoleMailerAdapterConfig,
+        private logger: Logger
+    ) {}
 
     public async send(mail: Mail): Promise<boolean> {
+        this.config
+
         this.logger.info(outdent`\n
         ============ BEGIN MAIL ============
             Subject: ${chalk.gray(mail.subject)}

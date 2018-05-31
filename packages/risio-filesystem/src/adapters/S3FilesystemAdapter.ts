@@ -3,11 +3,9 @@ import { injectable } from 'inversify'
 import * as path from 'path'
 import { Readable } from 'stream'
 
-import { FilesystemType } from '@risio/filesystem'
 import { BaseFilesystemAdapter } from './BaseFilesystemAdapter'
 
 export interface S3FilesystemAdapterConfig {
-    adapter: FilesystemType.S3
     bucket: string
     region: string
     accessKeyId: string
