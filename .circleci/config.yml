@@ -31,8 +31,8 @@ jobs:
       - attach_workspace:
           at: ~/app
       - run: |
-          if git log -1 --pretty=%B | grep "^v[0-9]\+\.[0-9]\+\.[0-9]\+$"; then
-            version=$(git log -1 --pretty=%B)
+          if git describe | grep "^v[0-9]\+\.[0-9]\+\.[0-9]\+$"; then
+            version=$(git describe)
             yarn oao publish --no-confirm --no-changelog-updates --no-git-commit --new-version=$version
           fi
 
