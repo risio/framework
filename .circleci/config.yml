@@ -13,6 +13,7 @@ jobs:
       - checkout
       - run: yarn
       - run: yarn build
+      - run: yarn test
       - persist_to_workspace:
           root: .
           paths:
