@@ -33,7 +33,7 @@ jobs:
       - run: |
           if git describe | grep "^v[0-9]\+\.[0-9]\+\.[0-9]\+$"; then
             version=$(git describe)
-            yarn oao publish --no-confirm --no-changelog-updates --no-git-commit --new-version=$version
+            yarn oao publish --no-confirm --no-changelog --no-git-commit --new-version=$version
           fi
 
 
