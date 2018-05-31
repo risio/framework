@@ -4,5 +4,4 @@ export const IOC = {
 
 export * from './LoggerConfig'
 export { LoggerServiceProvider } from './LoggerServiceProvider'
-
 export { ConsoleLoggerAdapter } from './adapters/ConsoleLoggerAdapter'

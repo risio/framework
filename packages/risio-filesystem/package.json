@@ -1,6 +1,6 @@
 {
   "name": "@risio/filesystem",
-  "version": "0.0.34",
+  "version": "0.0.36",
   "description": "Filesystem of the Risio Framework by Lifely",
   "author": "Bryan te Beek <bryantebeek@gmail.com>",
   "license": "MIT",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "build-watch": "tsc -w",
+    "build-watch": "tsc -w --preserveWatchOutput",
     "test": "jest",
     "test-watch": "jest --watchAll --coverage --notify"
   },
@@ -31,5 +31,9 @@
     "jest": "^22.4.3",
     "ts-jest": "^22.4.2",
     "typescript": "^2.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/risio/framework.git"
   }
 }

@@ -1,21 +1,23 @@
 {
   "private": true,
+  "version": "0.0.36",
   "repository": {
     "type": "git",
     "url": "https://github.com/risio/framework.git"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "build": "lerna run --parallel build",
-    "build-watch": "lerna run --parallel build-watch",
-    "test": "lerna run --parallel test",
-    "test-watch": "lerna run --parallel --stream test-watch",
-    "postinstall": "lerna exec --parallel 'npm install' && lerna bootstrap && lerna run build",
-    "publish": "lerna publish",
-    "playground": "lerna bootstrap && lerna exec --scope=playground -- npm start",
-    "start": "npm run playground"
+    "build": "oao run-script --parallel --no-parallel-logs build",
+    "build-watch": "oao run-script --parallel --no-parallel-logs build-watch",
+    "test": "oao run-script --parallel --no-parallel-logs test",
+    "test-watch": "oao run-script --parallel --no-parallel-logs test-watch",
+    "playground": "cd playground && yarn start",
+    "start": "playground"
   },
   "devDependencies": {
-    "lerna": "^2.9.0"
+    "oao": "^1.5.1"
   },
   "dependencies": {
     "gh-pages": "^1.1.0"
