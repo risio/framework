@@ -1,6 +1,6 @@
 name: risio
 title: Risio
-version: 
+version: 0.0.47
 nav:
 - modules/ROOT/nav.adoc
 - modules/module-one/nav.adoc
