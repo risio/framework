@@ -1,6 +1,6 @@
 {
   "name": "@risio/filesystem",
-  "version": "0.0.37",
+  "version": "0.0.42",
   "description": "Filesystem of the Risio Framework by Lifely",
   "author": "Bryan te Beek <bryantebeek@gmail.com>",
   "license": "MIT",
