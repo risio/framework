@@ -6,7 +6,6 @@
   ],
   "command": {
     "publish": {
-      "skipGit": true,
       "allowBranch": "master"
     }
   },
