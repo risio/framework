@@ -1,9 +1,9 @@
 .DEFAULT_GOAL := run
 
 clean:
-	rm -r node_modules
-	rm -r packages/*/node_modules
-	rm -r packages/*/dist
+	rm -rf node_modules
+	rm -rf packages/*/node_modules
+	rm -rf packages/*/dist
 
 clean-run: clean install run
 clean-install: clean install
