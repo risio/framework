@@ -20,6 +20,5 @@ build-watch:
 run:
 	cd playground && npm start
 
-version:
-	./node_modules/.bin/lerna version
-
+publish:
+	./node_modules/.bin/lerna publish
