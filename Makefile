@@ -6,6 +6,7 @@ clean:
 	rm -r packages/*/dist
 
 clean-run: clean install run
+clean-install: clean install
 
 install:
 	npm install

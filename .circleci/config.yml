@@ -11,30 +11,29 @@ jobs:
 
     steps:
       - checkout
-      - run: yarn
-      - run: yarn build
-      - run: yarn test
-      - persist_to_workspace:
-          root: .
-          paths:
-            - packages/*/dist
+      - run: make clean-install
+      - run: make build
+    #   - persist_to_workspace:
+    #       root: .
+    #       paths:
+    #         - packages/*/dist
 
-  publish-packages:
-    docker:
-      - image: node:8.11
+#   publish-packages:
+#     docker:
+#       - image: node:8.11
 
-    working_directory: ~/app
+#     working_directory: ~/app
 
-    steps:
-      - checkout
-      - run: yarn
-      - attach_workspace:
-          at: ~/app
-      - run: |
-          if git describe | grep "^v[0-9]\+\.[0-9]\+\.[0-9]\+$"; then
-            version=$(git describe)
-            yarn oao publish --no-confirm --no-changelog --no-git-commit --new-version=$version
-          fi
+#     steps:
+#       - checkout
+#       - run: make install
+#       - attach_workspace:
+#           at: ~/app
+#       - run: |
+#           if git describe | grep "^v[0-9]\+\.[0-9]\+\.[0-9]\+$"; then
+#             version=$(git describe)
+#             yarn oao publish --no-confirm --no-changelog --no-git-commit --new-version=$version
+#           fi
 
 
 workflows:
@@ -42,9 +41,9 @@ workflows:
   build:
     jobs:
       - build-packages
-      - publish-packages:
-          requires:
-            - build-packages
-          filters:
-            tags:
-              only: /^v.*/
+    #   - publish-packages:
+    #       requires:
+    #         - build-packages
+    #       filters:
+    #         tags:
+    #           only: /^v.*/
