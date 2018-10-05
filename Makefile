@@ -22,8 +22,8 @@ run:
 	cd playground
 	npm start
 
-publish:
-	./node_modules/.bin/lerna publish
+patch:
+	./node_modules/.bin/lerna version patch --tag-version-prefix='' --sign-git-commit --sign-git-tag --yes
 
 doc:
 	cd docs && ../node_modules/.bin/antora site.yml
