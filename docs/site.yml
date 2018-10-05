@@ -8,6 +8,7 @@ content:
     tags: [0.0.44]
     start_path: docs
 ui:
+  output_dir: ui
   bundle:
     url: ui/build/ui-bundle.zip
     snapshot: true

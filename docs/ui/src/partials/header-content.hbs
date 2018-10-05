@@ -1,7 +1,10 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}">{{site.title}}</a>
+      <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}">
+        <img height="40" src="{{uiRootPath}}/img/logo.png" style="margin-right: 5px;">
+        Risio
+      </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
