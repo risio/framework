@@ -14,12 +14,15 @@
   },
   "scripts": {
     "build": "tsc",
-    "build-watch": "tsc -w --preserveWatchOutput",
-    "test": "jest",
-    "test-watch": "jest --watchAll --coverage --notify"
+    "build-watch": "tsc -w --preserveWatchOutput"
   },
   "dependencies": {
     "@risio/foundation": "^0.0.34",
+    "@types/chalk": "^2.2.0",
+    "@types/jest": "^22.2.1",
+    "@types/lodash": "^4.14.106",
+    "@types/node": "^8.10.0",
+    "@types/winston": "^2.3.9",
     "chalk": "^2.3.2",
     "inversify": "^4.11.1",
     "lodash": "^4.17.5",
@@ -27,14 +30,7 @@
     "winston": "^2.4.1"
   },
   "devDependencies": {
-    "@types/chalk": "^2.2.0",
-    "@types/jest": "^22.2.1",
-    "@types/lodash": "^4.14.106",
-    "@types/node": "^8.10.0",
-    "@types/winston": "^2.3.9",
-    "jest": "^22.4.3",
-    "ts-jest": "^22.4.2",
-    "typescript": "^2.7.2"
+    "typescript": "^2.9.2"
   },
   "repository": {
     "type": "git",

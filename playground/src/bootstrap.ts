@@ -1,11 +1,9 @@
-import { Logger, Mailer, Filesystem } from '@risio/foundation'
-
-import { logConfig } from '../config/log'
-import { mailConfig } from '../config/mail'
-import { filesystemConfig } from '../config/filesystem'
-import { applicationConfig } from '../config/application'
-
-import { app as application } from './app'
+import { Filesystem, Logger, Mailer } from '@risio/foundation';
+import { applicationConfig } from '../config/application';
+import { filesystemConfig } from '../config/filesystem';
+import { logConfig } from '../config/log';
+import { mailConfig } from '../config/mail';
+import { app as application } from './app';
 
 // import { Manager, Scheduler } from '../console'
 // import { Cache } from '../cache'
@@ -35,6 +33,7 @@ import { app as application } from './app'
     log().debug('debug')
     log().info('info')
     log().warn('warn')
+    log().error('error')
 
     await mailer().send({
         to: 'bryan@lifely.nl',

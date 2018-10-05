@@ -14,25 +14,21 @@
   },
   "scripts": {
     "build": "tsc",
-    "build-watch": "tsc -w --preserveWatchOutput",
-    "test": "jest",
-    "test-watch": "jest --watchAll --coverage --notify"
+    "build-watch": "tsc -w --preserveWatchOutput"
   },
   "dependencies": {
     "@risio/foundation": "^0.0.34",
     "@risio/log": "^0.0.34",
+    "@types/jest": "^22.2.1",
+    "@types/lodash": "^4.14.106",
+    "@types/node": "^8.10.0",
+    "@types/nodemailer": "^4.6.0",
     "inversify": "^4.11.1",
     "nodemailer": "^4.6.4",
     "outdent": "^0.5.0"
   },
   "devDependencies": {
-    "@types/jest": "^22.2.1",
-    "@types/lodash": "^4.14.106",
-    "@types/node": "^8.10.0",
-    "@types/nodemailer": "^4.6.0",
-    "jest": "^22.4.3",
-    "ts-jest": "^22.4.2",
-    "typescript": "^2.7.2"
+    "typescript": "^2.9.2"
   },
   "repository": {
     "type": "git",
