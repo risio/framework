@@ -1,0 +1,2 @@
+* Installation
+    * xref:index.adoc[Getting started]

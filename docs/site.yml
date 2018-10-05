@@ -1,0 +1,13 @@
+site:
+  title: Risio - Documentation
+  url: https://risio.github.io/framework
+  start_page: risio::index.adoc
+content:
+  sources:
+  - url: ../
+    branches: master
+    start_path: docs
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true

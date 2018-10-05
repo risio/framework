@@ -19,7 +19,16 @@ build-watch:
 	./node_modules/.bin/lerna exec npm run build-watch
 
 run:
-	cd playground && npm start
+	cd playground
+	npm start
 
 publish:
 	./node_modules/.bin/lerna publish
+
+doc:
+	cd docs && ../node_modules/.bin/antora site.yml
+	touch docs/build/site/.nojekyll
+	open docs/build/site/index.html
+
+doc-publish:
+	./node_modules/.bin/gh-pages -d docs/build/site
