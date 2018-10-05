@@ -4,7 +4,7 @@
     <p align="center">Risio aims to provide a high level of abstraction to common logic used in web applications in a easy and fun-to-code-in way ;)<p>
     <p align="center">
         Read the documentation at <a href="https://risio.github.io/framework">
-            https://risio.github.io/framework
+            risio.github.io/framework
         </a>
     </p>
     <p align="center">
