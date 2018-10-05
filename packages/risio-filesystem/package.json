@@ -1,6 +1,6 @@
 {
   "name": "@risio/filesystem",
-  "version": "0.0.36",
+  "version": "0.0.35",
   "description": "Filesystem of the Risio Framework by Lifely",
   "author": "Bryan te Beek <bryantebeek@gmail.com>",
   "license": "MIT",
@@ -17,9 +17,9 @@
     "build-watch": "tsc -w --preserveWatchOutput"
   },
   "dependencies": {
+    "@risio/foundation": "^0.0.34",
     "@types/lodash": "^4.14.106",
     "@types/node": "^8.10.0",
-    "@risio/foundation": "^0.0.34",
     "aws-sdk": "^2.213.1",
     "inversify": "^4.11.1",
     "mime": "^2.2.0"
