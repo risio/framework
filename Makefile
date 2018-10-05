@@ -23,7 +23,18 @@ run:
 	npm start
 
 patch:
-	./node_modules/.bin/lerna version patch --tag-version-prefix='' --sign-git-commit --sign-git-tag --yes
+	git reset
+	git checkout master
+	./node_modules/.bin/lerna version patch --tag-version-prefix='' --yes --skip-git
+	sed -i.bak "s/.*version.*/version: $(shell cat lerna.json | jq .version -r | sed -e 's/\./\\\./g')/g" docs/antora.yml
+	git add docs/antora.yml
+	git commit -m "chore(docs): bump version"
+	git tag -a "$(shell cat lerna.json | jq .version -r)" -m "$(shell cat lerna.json | jq .version -r)"
+	git push
+	./node_modules/.bin/lerna publish from-git --yes
+	cd docs && ../node_modules/.bin/antora site.yml
+	touch docs/build/site/.nojekyll
+	open docs/build/site/index.html
 
 doc:
 	cd docs && ../node_modules/.bin/antora site.yml
