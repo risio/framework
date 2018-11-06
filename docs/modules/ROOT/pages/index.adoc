@@ -1,5 +1,13 @@
 = Getting started
 
+WARNING: This example is meant for illustration and is _not_ intended to be copied.
+
+NEW: test
+
+OLD: test
+
+DEPRECATED: adsd
+
 This is the automatic start page for version *{page-component-version}* of Component B.
 
 Component B is one of two documentation components in the Antora Demo.

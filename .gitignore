@@ -17,3 +17,6 @@ lerna-debug.log
 
 # Tests
 **/coverage
+
+# Documentation
+docs/build

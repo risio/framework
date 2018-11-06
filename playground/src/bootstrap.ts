@@ -4,9 +4,19 @@ import { filesystemConfig } from '../config/filesystem';
 import { logConfig } from '../config/log';
 import { mailConfig } from '../config/mail';
 import { app as application } from './app';
+import { injectable, inject } from 'inversify';
 
 // import { Manager, Scheduler } from '../console'
 // import { Cache } from '../cache'
+
+@injectable()
+class Test {
+
+    constructor(
+        private filesystem: Filesystem
+    ) {}
+
+}
 
 (async () => {
     console.log('Application starting')
@@ -24,11 +34,13 @@ import { app as application } from './app';
     const log = (adapter?: string) => app.ioc.getNamed<Logger>(Symbol.for('Risio:Logger'), adapter ? adapter : logConfig.adapter)
     const filesystem = (adapter?: string) => app.ioc.getNamed<Filesystem>(Symbol.for('Risio:Filesystem'), adapter ? adapter : filesystemConfig.adapter)
     const mailer = (adapter?: string) => app.ioc.getNamed<Mailer>(Symbol.for('Risio:Mailer'), adapter ? adapter : mailConfig.adapter)
-
-    // const cache = (driver?: string) => app.make<Cache>(`cache.${driver ? driver : app.config.cache.driver}`)
+    // const cache = (driver?: string) => app.ioc.getNamed<Cache>(Symbol.for('Risio:Cache'), `cache.${driver ? driver : cacheConfig.driver}`)
 
     // const commandManager = () => app.make<Manager>('console.manager')
     // const commandScheduler = () => app.make<Scheduler>('console.scheduler')
+
+    app.ioc.bind(Test).toSelf()
+    app.ioc.get(Test)
 
     log().debug('debug')
     log().info('info')
