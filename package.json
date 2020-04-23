@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@antora/cli": "^1.1.1",
-    "@antora/site-generator-default": "^1.1.1",
+    "@antora/site-generator-default": "^2.3.0",
     "@types/jest": "^23.3.3",
     "@types/node": "^8.10.0",
     "gh-pages": "^2.0.1",
