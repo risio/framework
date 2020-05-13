@@ -17,7 +17,7 @@
     "@antora/cli": "^1.1.1",
     "@antora/site-generator-default": "^1.1.1",
     "@types/jest": "^23.3.3",
-    "@types/node": "^8.10.0",
+    "@types/node": "^14.0.0",
     "gh-pages": "^2.0.1",
     "jest": "^23.6.0",
     "lerna": "^3.4.1",
